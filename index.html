@@ -1,0 +1,114 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <script src="index.pack.js"></script>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                background-image: url("https://images.pexels.com/photos/1431822/pexels-photo-1431822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+                min-height: 100vh;
+                width: 100vw;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                box-sizing: border-box;
+            }
+        
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                text-align: center;
+            }
+            #show-msg p{
+                background-image: linear-gradient(90deg, lightblue,lightgreen);
+                padding: 20px;
+                width: fit-content;
+                margin: 10px auto; /*p is subchild. so container's align-items won't affect it.*/
+                border-radius: 16px;
+                box-shadow: 0px 6px 8px rgba(0,0,0,0.2);
+                text-align: center;
+                animation: slide-in-right 0.8s ease-out forwards;
+            }
+            #cityName{
+                font-style: italic;
+                font-weight: bold;
+                text-decoration: underline dotted black;
+            }
+            /*select button element in HTML: */
+            /*vaghti load mishe animate beshe. vaghti pointer rooshe animate bashe. ama vaghti pointer ro bardaram bargarde be yellow: */
+            #city-select{ 
+                margin-top: 15px;
+                background-color: yellow; 
+                transition: background-color 0.3s;
+                padding: 10px 16px;
+                border: 1px solid black;
+                border-radius: 6px; 
+                text-align: center;
+                cursor: pointer;
+                text-shadow: 4px 4px 6px rgba(0,0,0,0.2);
+                /*animation: slide-in-left 0.8s ease-out forwards; */
+        
+            }
+            .slide-in-left{
+                animation-name: slide-in-left;
+                animation-duration: 0.8s;
+                animation-timing-function: forwards;
+                animation-iteration-count: 1;                  
+            }
+            #city-select:hover {
+                animation-name: select-button;
+                animation-duration: 4s;
+                animation-timing-function: ease-in;
+                animation-iteration-count : infinite;
+            }
+            @keyframes slide-in-left{
+                0%{
+                    transform: translateX(-100vw);
+                    opacity:0;
+                }
+                100%{
+                    transform: translateX(0);
+                    opacity:1;
+                }
+            }
+            @keyframes slide-in-right{
+                0%{
+                   transform: translateX(100vw);
+                   opacity:0; 
+                }
+                100%{
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            @keyframes select-button{
+                0% {background-color: yellow;}
+                25% {background-color: orange;}
+                50% {background-color: red;}
+                75% {background-color: violet;}
+                100% {background-color: yellow;}
+            }
+        </style>
+    </head>
+    <body>
+        <!--step1: create a drop down: -->
+        <div class="container">
+            <div id="city-selection">
+                <select id="city-select" class="slide-in-left">
+                    <option value="Amol">Amol</option>
+                    <option value="Manchester">Manchester</option>
+                    <option value="Tehran">Tehran</option>
+                </select>
+            </div>
+            <div id="show-msg">
+            </div>
+        </div>
+    </body>
+</html>
