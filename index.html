@@ -62,11 +62,15 @@
                 animation-timing-function: forwards;
                 animation-iteration-count: 1;                  
             }
-            #city-select:hover {
+            /*#city-select:hover {
                 animation-name: select-button;
                 animation-duration: 4s;
                 animation-timing-function: ease-in;
                 animation-iteration-count : infinite;
+            } */
+             /* This is only for color animation when hovered */
+            .select-hover:hover {
+            animation: select-button 4s ease-in infinite;
             }
             @keyframes slide-in-left{
                 0%{
@@ -88,13 +92,14 @@
                     opacity: 1;
                 }
             }
+            
             @keyframes select-button{
                 0% {background-color: yellow;}
                 25% {background-color: orange;}
                 50% {background-color: red;}
                 75% {background-color: violet;}
                 100% {background-color: yellow;}
-            }
+            } 
         </style>
     </head>
     <body>

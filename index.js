@@ -29,7 +29,10 @@ const selectEl = document.getElementById('city-select');
 selectEl.addEventListener('change', e => {
     getWeather(e.target.value);
 })
-/*step 5: add an event listener that makes select el slide from the left only ONCE when page uploads: */
-window.addEventListener("DOMContentLoaded", () => {
-    selectEl.classList.add('slide-in-left');
-});
+/*step 5: add an event listener that makes select el slide from the left only ONCE and makes the select element
+background color animate on hover */
+
+
+
+
+
