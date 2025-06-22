@@ -1,7 +1,3 @@
-const exampleSet = new Set([1,1,1,1,2,2,2,2]);
-console.log(exampleSet)
-
-
-
-
+let test = {a:1 , b: 2, c:3, d:4}
+console.log('Object is', JSON.stringify(test,null,2));
 
